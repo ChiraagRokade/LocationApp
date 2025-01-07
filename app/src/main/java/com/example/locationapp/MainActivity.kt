@@ -20,8 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             LocationAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    LocationApp(
                         modifier = Modifier.padding(innerPadding)
                             )
                 }
@@ -31,17 +30,6 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-        )
-}
+fun LocationApp(modifier: Modifier) {
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    LocationAppTheme {
-        Greeting("Android")
-    }
 }
